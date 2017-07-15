@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  devise_for :students, :controllers => { registrations: 'registrations' }
+  root to: "student_home#feed"
+  get 'student_home/feed'
+
+  get 'student_home/profile'
+
+  get 'student_home/notification'
+
+  get 'student_home/write_blog'
+
+  get 'student_home/my_blogs'
+
+  
   get '/' => 'static_home#index'
   get 'static_home/index'
 

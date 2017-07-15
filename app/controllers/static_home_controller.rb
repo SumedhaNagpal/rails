@@ -1,4 +1,5 @@
 class StaticHomeController < ApplicationController
+  layout "staticHome"
   def index
   end
 

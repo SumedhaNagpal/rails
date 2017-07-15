@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+	<header>
+			<div id="logo" style="margin-left:2%;margin-top:0.8%;" >
+			<%= image_tag 'igdtuw_logo.png' %>
+			</div>
+			<div id="head">
+				<span id="tnp">Training and Placement Cell</span><br>
+				<span id="college">Indira Gandhi Delhi Technical University for Women</span>
+			</div>
+			<h3><a href="/students/sign_in">Login</a></h3>
+		</header>
+
+		<nav id="nav-wrap">
+
+         <ul id="nav">
+            <li><a href="/static_home/index">Home</a></li>
+            <li><a href="/static_home/message">Message</a></li>
+	        <li><a href="/static_home/objective">Objective</a></li>
+            <li><a href="/static_home/academics">Academics</a></li>
+            <li><a href="/static_home/stats">Placement Statistics</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav>
+      <br><br><br><br><br>
+
+		
+      <br><br><br><br>
+      <%= yield %>
+      <footer>
+      	<div>
+      		<div id="contact">Contact Us</div>
+      		<div class="info"> randomemail@gmail.com </div>
+      	</div>
+      	<div>
+      		<ul class="right">
+               <li><a href="#">Contact Us</a></li>
+               <li><a href="http://igdtuw.ac.in/">IGDTUW home</a></li>
+               <li><a href="#">Feedback</a></li>
+               <li><a href="#">Archives</a></li>
+            </ul>
+        </div>
+      </footer>
+
+
+</body>
+</html>

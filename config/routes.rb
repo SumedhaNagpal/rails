@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'student_home/my_blogs'
 
   
-  get '/' => 'static_home#index'
+ 
   get 'static_home/index'
 
   get 'static_home/message'

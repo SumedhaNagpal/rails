@@ -26,10 +26,14 @@
     <% end %>
 	 <% if student_signed_in? %>
 
+
       <h1>Welcome <%= current_student.first_name %> !!</h1> 
       <h3> Last signed at <%= current_student.last_sign_in_at.to_formatted_s(:short) %></h3>
 
       <%= link_to 'Logout', destroy_student_session_path, method: :delete %>
+  
+
+
 
      <% end %>
 	

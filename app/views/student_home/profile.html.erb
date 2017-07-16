@@ -12,11 +12,14 @@
 	<div id="student_profile_main">
 
 		<div id="skills">
-			<%= link_to 'ADD SKILL' , controller: "student_home" , action: "add_skill", :id=>current_student.id %>
+			<%= link_to 'ADD SKILLS' , url_for(controller: "student_home" , action: "add_skill",id: current_student.id), :id=>"plus_skill"%>
+			<div id="add_skill">
+				Add skill
+			</div>
 		</div>
 
 		<div id="work_experiences">
-			<%= link_to 'ADD EXPERIENCE' , url_for(controller: "student_home" , action: "add_experience", :id=>current_student.id)%>
+			<%= link_to 'ADD EXPERIENCE' , url_for(controller: "student_home" , action: "add_experience",id: current_student.id), :id=>"plus_experience"%>
 		</div>
 
 		<div id="position_of_responsibilty">

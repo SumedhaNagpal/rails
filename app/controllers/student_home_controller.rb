@@ -19,7 +19,7 @@ class StudentHomeController < ApplicationController
   end
 
   def add_skill
-
+    @skill=Skill.new
   end
 
   def add_experience

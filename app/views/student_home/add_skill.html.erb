@@ -1,0 +1,13 @@
+<%= form_tag url_for(controller: 'student_home', action: 'add_skill') do  %>
+
+
+  <div class="field">
+    <%= label_tag :skill_content %><br>
+    <%= text_field_tag :skill_content %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

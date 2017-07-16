@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  exp_title: MyString
+  string: MyString
+  exp_content: MyText
+  student_id: 
+
+two:
+  exp_title: MyString
+  string: MyString
+  exp_content: MyText
+  student_id: 

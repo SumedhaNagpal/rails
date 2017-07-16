@@ -1,0 +1,18 @@
+<%= form_tag url_for(controller: 'student_home', action: 'add_experience') do  %>
+
+
+  <div class="field">
+    <%= label_tag :exp_title %><br>
+    <%= text_field_tag :exp_title %>
+  </div>
+
+    <div class="field">
+    <%= label_tag :exp_content %><br>
+    <%= text_field_tag :exp_content %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

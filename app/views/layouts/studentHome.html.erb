@@ -26,16 +26,40 @@
     <% end %>
 	 <% if student_signed_in? %>
 
+   <div id="student_wrapper"> 
+      <!--<h1>Welcome <%= current_student.first_name %> !!</h1>  --> 
+      <div id="student_header">
+        <div id="wrap">
+           <div id="searchbox">
+              <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+                </button>
+              </div > 
+             </div>
 
-      <h1>Welcome <%= current_student.first_name %> !!</h1> 
-      <h3> Last signed at <%= current_student.last_sign_in_at.to_formatted_s(:short) %></h3>
+              <div id="profile_nav">
+                <ul>
+               
+                <li> <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %> <br> </li>
+                <li> <%= link_to 'Profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </li> 
+                 <li> <%= link_to 'Logout', destroy_student_session_path, method: :delete %> <br> </li>
+                </ul>
+              </div> 
+                    <br> <br> 
+            </div>
+        </div>
 
-      <%= link_to 'Logout', destroy_student_session_path, method: :delete %> <br>
-  
-      <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %> <br> <br> <br> 
+
+      </div> 
+
+      
+      <% end %>
+     
 
 
-     <% end %>
+   
 	
       <%= yield %>
 

@@ -1,5 +1,9 @@
+<div id="blogfeed">
 <% @blogs.each do |blog| %>
 	<%= blog.student.first_name %> <br> 
 	<%=link_to blog.title, url_for(controller: 'blogs', action: 'show' , :id => blog.id) %> <br> 
 	<%= time_ago_in_words(blog.created_at) %> <br> <br> <br>  
+
 <%end%>
+
+</div> 

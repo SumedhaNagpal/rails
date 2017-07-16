@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   root to: "student_home#feed"
   get 'student_home/feed'
 
-  get 'student_home/profile'
+  get 'student_home/profile/:id' => 'student_home#profile'
 
+  get '/add_skills' => 'student_home#add_skill'
+  get '/add_experience' => 'student_home#add_experience'
+  get '/add_por' => 'student_home#add_por'
   get 'student_home/notification'
 
   get 'student_home/write_blog'

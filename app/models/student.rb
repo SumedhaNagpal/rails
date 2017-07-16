@@ -1,5 +1,6 @@
 class Student < ActiveRecord::Base
 	has_many :blogs
+	has_many :skills 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

@@ -17,4 +17,14 @@ class StudentHomeController < ApplicationController
 
   def my_blogs
   end
+
+  def add_skill
+
+  end
+
+  def add_experience
+  end
+
+  def add_por
+  end 
 end

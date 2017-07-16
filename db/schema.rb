@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716071422) do
+ActiveRecord::Schema.define(version: 20170716094223) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20170716071422) do
   end
 
   add_index "blogs", ["student_id"], name: "index_blogs_on_student_id"
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "skill_content"
+    t.integer  "student_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "skills", ["student_id"], name: "index_skills_on_student_id"
 
   create_table "students", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

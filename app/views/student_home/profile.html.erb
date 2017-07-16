@@ -1,2 +1,33 @@
 <h1>StudentHome#profile</h1>
-<p>Find me in app/views/student_home/profile.html.erb</p>
+
+
+<div id="student_profile">
+
+
+	<div id="student_profile_header">
+
+
+	</div>
+
+	<div id="student_profile_main">
+
+		<div id="skills">
+			<%= link_to 'ADD SKILL' , controller: "student_home" , action: "add_skill", :id=>current_student.id %>
+		</div>
+
+		<div id="work_experiences">
+			<%= link_to 'ADD EXPERIENCE' , url_for(controller: "student_home" , action: "add_experience", :id=>current_student.id)%>
+		</div>
+
+		<div id="position_of_responsibilty">
+			<%= link_to 'ADD POSITIONS OF RESPONSIBILITY' , url_for(controller: "student_home" , action: "add_por", :id=>current_student.id) %>
+		</div>
+
+		<div id="research_paper">
+		</div>
+
+
+	</div>
+
+</div>
+

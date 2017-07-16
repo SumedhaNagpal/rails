@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   devise_for :students, :controllers => { registrations: 'registrations' }
   root to: "student_home#feed"
   get 'student_home/feed'

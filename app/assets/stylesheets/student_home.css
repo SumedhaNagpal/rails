@@ -40,11 +40,11 @@ body{
 #profile_nav ul li div{
   width:70px;
 }
-a:visited{
+#profile_nav ul li a:visited{
   color: white;
   text-decoration: none;
 }
-a:hover{
+#profile_nav ul li a:hover{
     list-style-type: none;
     color: white;
     background-color: transparent;
@@ -126,6 +126,16 @@ a:hover{
   
   height:22%;
   background-color: #009F8A;
+}
+
+#section_profile_image{
+  position: absolute;
+  width:80px;
+  background-color: black;
+  border-radius: 40px;
+  height: 80px;
+  margin-left: 30%;
+  margin-top: 42px;
 }
 
 #current_stu_profile {

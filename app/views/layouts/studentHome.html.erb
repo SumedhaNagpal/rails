@@ -65,8 +65,11 @@
         <section id="side_profile">
           <div id="side_profile_section">
             <div id="section_header">
-              
+              <div id="section_profile_image">
+                
+              </div>
             </div>
+            <%= link_to 'Update your profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </div></li> 
             
           </div>
 

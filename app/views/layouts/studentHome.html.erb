@@ -8,6 +8,8 @@
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
 
@@ -27,41 +29,43 @@
 	 <% if student_signed_in? %>
 
    <div id="student_wrapper"> 
-      <!--<h1>Welcome <%= current_student.first_name %> !!</h1>  --> 
-      <div id="student_header">
-        <div id="wrap">
-           <div id="searchbox">
+        <!--<div id="wrap">-->            
               <div class="search">
                 <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
+                <button type="submit" class="searchButton">Search
+                <!--<i class="fa fa-search"></i>-->
                 </button>
               </div > 
-             </div>
+            
 
-              <div id="profile_nav">
+            <div id="profile_nav">
                 <ul>
-               
-                <li> <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %> <br> </li>
+                <li> <%= link_to 'Home' ,url_for(controller: 'student_home', action: 'feed') %> </li>
+                <li> <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %>  </li>
                 <li> <%= link_to 'Profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </li> 
-                 <li> <%= link_to 'Logout', destroy_student_session_path, method: :delete %> <br> </li>
+                 <li> <%= link_to 'Logout', destroy_student_session_path, method: :delete %> </li>
                 </ul>
-              </div> 
+            </div> 
                     <br> <br> 
-            </div>
-        </div>
-
-
+          <!--</div>-->
       </div> 
 
-      
+      <main class="profile_page">
+        <section id="side_profile">
+          
+        </section>  
+
+        <section id="current_stu_profile">
+           <%= yield %>
+        </section>
       <% end %>
      
 
 
    
 	
-      <%= yield %>
+     
+    </main>
 
 </body>
 </html>

@@ -9,6 +9,7 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -32,7 +33,8 @@
         <!--<div id="wrap">-->            
               <div class="search">
                 <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                <button type="submit" class="searchButton">Search
+                <button type="submit" class="searchButton"><i class="fa fa-search"></i>
+
                 <!--<i class="fa fa-search"></i>-->
                 </button>
               </div > 
@@ -40,10 +42,19 @@
 
             <div id="profile_nav">
                 <ul>
-                <li> <%= link_to 'Home' ,url_for(controller: 'student_home', action: 'feed') %> </li>
-                <li> <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %>  </li>
-                <li> <%= link_to 'Profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </li> 
-                 <li> <%= link_to 'Logout', destroy_student_session_path, method: :delete %> </li>
+                  <li style="color:white;"> 
+                  <div>
+                  <i class="fa fa-home"></i><%= link_to 'Home' ,url_for(controller: 'student_home', action: 'feed') %>
+                  </div>
+                   </li>
+                <li>
+                  <div>
+                    <i class="fa fa-pencil"></i> 
+                    <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %>  
+                  </div>
+                </li>
+                <li> <div><i class="fa fa-user"></i><%= link_to 'Profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </div></li> 
+                 <li> <div><i class="fa fa-sign-out"></i><%= link_to 'Logout', destroy_student_session_path, method: :delete %></div> </li>
                 </ul>
             </div> 
                     <br> <br> 
@@ -52,6 +63,13 @@
 
       <main class="profile_page">
         <section id="side_profile">
+          <div id="side_profile_section">
+            <div id="section_header">
+              
+            </div>
+            
+          </div>
+
           
         </section>  
 

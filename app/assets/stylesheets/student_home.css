@@ -6,6 +6,12 @@ body{
   height: 100%;
 }
 
+/*  *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}*/
+
 #student_wrapper{
   
   height:20%;
@@ -33,7 +39,7 @@ body{
   list-style: none;
   padding: 15px;
   margin-right: 15px;
-  color:white;
+  color: white;
   display: inline-block;
   font: bold 18px 'myFirstFont', sans-serif;
 }
@@ -102,29 +108,34 @@ body{
 
 .profile_page {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #side_profile {
-  position: absolute;
+  /*position: absolute;*/
   background-color: #fff;
   width: 25%;
   height: 100%;
   float: left;
+  margin-top: 10px;
   border-left: 1px solid black; 
 }
 
 #side_profile_section{
-  position: fixed;
-  height:52%;
-  width: 15%;
+  /*position: fixed;*/
+  height:400px;
+  width: 200px;
   background-color: white;
-  margin-top: 4%;
-  margin-left: 8%;
+  margin-top: 10%;
+  margin-left: 25%;
   border: solid 2px #009F8A;
+  text-align: center;
+  font: 20px 'opensans-bold', sans-serif;
+  /*display: flex;*/
+  /*flex-direction: vertical;*/
 }
 #section_header{
-  
-  height:22%;
+  height: 80px;
   background-color: #009F8A;
 }
 
@@ -134,14 +145,22 @@ body{
   background-color: black;
   border-radius: 40px;
   height: 80px;
-  margin-left: 30%;
-  margin-top: 42px;
+  margin-left: 60px;
+  /*margin-top: 42px;*/
+}
+
+#update-link {
+  font: 12px 'opensans-bold', sans-serif;
+  vertical-align: bottom;
 }
 
 #current_stu_profile {
-  margin: 4%;
-  margin-left: 30%;
-  margin-right: 20%;
+  
+  /*margin-left: 30%;*/
+  box-sizing: content-box;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 10%;
   width: 55%;
   height: 100%;
   position: absolute;
@@ -151,8 +170,18 @@ body{
   margin-left: 27%;
 }
 
+#current_stu_profile h1 {
+  font: 40px/0.5em 'opensans-bold', sans-serif;
+  text-align: center;
+}
+
+#student_profile_header {
+    text-align: center;
+    font: 20px 'opensans-bold', sans-serif;
+}
 
 #skills, #work_experiences, #positions_of_responsibility {
+
   background-color: #FFAF1B;
   border: 1px solid black;
   margin: 1%;

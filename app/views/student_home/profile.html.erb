@@ -1,21 +1,24 @@
-<h1>StudentHome#profile</h1>
-
+<h1>Profile</h1>
+<br>
 
 <div id="student_profile">
 
 
 	<div id="student_profile_header">
-
-
+		<%= current_student.first_name %> <%=  current_student.last_name %><br>
+		<%= current_student.enrollment_no %> <br>
+		<%= current_student.branch.upcase %>, <%= current_student.year %> Year
 	</div>
 
 	<div id="student_profile_main">
 
 		<div id="skills">
 			<%= link_to 'ADD SKILLS' , url_for(controller: "student_home" , action: "add_skill",id: current_student.id), :id=>"plus_skill"%>
-			<div id="add_skill">
-				Add skill
-			</div>
+			<!--<div id="add_skill">
+				
+			</div>-->
+			
+
 		</div>
 
 		<div id="work_experiences">

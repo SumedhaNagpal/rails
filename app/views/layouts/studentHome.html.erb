@@ -43,18 +43,20 @@
             <div id="profile_nav">
                 <ul>
                   <li style="color:white;"> 
-                  <div>
-                  <i class="fa fa-home"></i><%= link_to 'Home' ,url_for(controller: 'student_home', action: 'feed') %>
-                  </div>
-                   </li>
-                <li>
-                  <div>
-                    <i class="fa fa-pencil"></i> 
-                    <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %>  
-                  </div>
-                </li>
-                <li> <div><i class="fa fa-user"></i><%= link_to 'Profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </div></li> 
-                 <li> <div><i class="fa fa-sign-out"></i><%= link_to 'Logout', destroy_student_session_path, method: :delete %></div> </li>
+                    <div>
+                      <i class="fa fa-home"></i><%= link_to 'Home' ,url_for(controller: 'student_home', action: 'feed') %>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <i class="fa fa-pencil"></i> 
+                      <%= link_to 'Write' ,url_for(controller: 'blogs', action: 'new') %>  
+                    </div>
+                  </li>
+                  <li> <div><i class="fa fa-user"></i><%= link_to 'Profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </div>
+                  </li> 
+                  <li> <div><i class="fa fa-sign-out"></i><%= link_to 'Logout', destroy_student_session_path,     method: :delete %></div> 
+                  </li>
                 </ul>
             </div> 
                     <br> <br> 
@@ -69,8 +71,13 @@
                 
               </div>
             </div>
-            <%= link_to 'Update your profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </div></li> 
-            
+                <br><br>               
+                <%= current_student.first_name %> <%=  current_student.last_name %><br>
+                <%= current_student.enrollment_no %> <br>
+                <%= current_student.branch.upcase %>, <%= current_student.year %> Year
+                
+                <br><br>
+                <div id="update-link" ><%= link_to 'Update your profile' ,url_for(controller: 'student_home', action: 'profile', :id=>current_student.id) %> </div>
           </div>
 
           
@@ -78,6 +85,7 @@
 
         <section id="current_stu_profile">
            <%= yield %>
+           
         </section>
       <% end %>
      

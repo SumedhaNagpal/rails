@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get 'student_home/write_blog'
 
   get 'student_home/my_blogs'
-
+  
+  get '/profilee' => 'student_home#profilee'
+  post '/upload_image' => 'student_home#upload_image'
   
  
   get 'static_home/index'

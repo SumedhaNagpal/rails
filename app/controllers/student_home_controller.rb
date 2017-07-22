@@ -4,7 +4,20 @@ class StudentHomeController < ApplicationController
   def feed
     @blogs = Blog.all.order('created_at DESC')
   end
-  
+   def profilee
+  end
+
+  def upload_image
+    uploaded_file = params[:image]
+    filename = SecureRandom.hex + "." +uploaded_file.original_filename.split('.')[1]
+    filepath = Dir.pwd + "/public/upload/" + filename
+    File.open(filepath,'wb') do |file|
+    file.write(uploaded_file.read())
+    end
+    current_student.profile_picture = filename
+    current_student.save!
+      return redirect_to '/profilee'
+  end
 
   def profile
   end

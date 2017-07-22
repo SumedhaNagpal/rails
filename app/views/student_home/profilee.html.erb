@@ -1,0 +1,10 @@
+<% if current_student.profile_picture %>
+<img src="/upload/<%= current_student.profile_picture %>" >
+<% end %>
+
+<%= form_tag url_for(controller: :student_home, action: :upload_image), multipart: true do %>
+<%= file_field_tag :image %>
+<br>
+
+<%= submit_tag %>
+<% end %>

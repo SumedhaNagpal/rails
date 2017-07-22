@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+#student_wrapper{
+  
+  height:20%;
+  background-color: #009F8A ; 
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  width:100%;
+  box-shadow: -9px -1px 10px 3px #888888;
+
+}
+ 
+ #profile_nav{
+  width: 30%;
+  margin-top: 13px;
+  margin-right: -18%;
+ }
+
+ #profile_nav ul{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+ }
+
+#profile_nav ul li{
+  list-style: none;
+  padding: 15px;
+  margin-right: 15px;
+  color:white;
+  display: inline-block;
+  font: bold 18px 'myFirstFont', sans-serif;
+}
+#profile_nav ul li div{
+  width:70px;
+}
+#profile_nav ul li a:visited{
+  color: white;
+  text-decoration: none;
+}
+#profile_nav ul li a:hover{
+    list-style-type: none;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.search {
+  width: 30%;
+  position: relative;
+  vertical-align: center;
+  display: flex;
+  left:10%;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #BFBBE7;
+  padding: 5px;
+  height: 50%;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+
+}
+
+.searchTerm:focus{
+  color: #000;
+}
+
+.searchButton {
+  position: absolute;  
+  left: 90%;
+  width: 10%;
+  height: 32px;
+  border: 1px solid #BFBBE7;
+  background: #BFBBE7;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.profile_page_in_blogs #current_stu_profile_in_blogs{
+  margin: 4%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background-color: #FFC14D;
+  float: right;
+  border:solid 2px #009F8A;
+}
+
+/* applying css to the show view that we are yielding */
+
+#title_of_blog{
+
+  text-transform: uppercase;
+  font-size: 50px ; 
+  text-align: center;
+  font-family: "circular" ; 
+  font-weight: bold ; 
+}
+
+#content_of_blog{
+  
+  text-align:justify;
+  letter-spacing:0.1em;
+  font-size: 15px;
+   font-family: "circular" ; 
+   margin: auto;
+   width: 80%;
+
+
+}
+

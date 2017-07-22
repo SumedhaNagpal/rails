@@ -68,6 +68,9 @@
           <div id="side_profile_section">
             <div id="section_header">
               <div id="section_profile_image">
+                <% if current_student.profile_picture %>
+               <img src="/upload/<%=current_student.profile_picture %>">
+                <% end %>
                 
               </div>
             </div>
@@ -92,9 +95,8 @@
 
 
    
-	
+  
      
     </main>
 
 </body>
-</html>

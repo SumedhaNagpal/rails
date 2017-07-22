@@ -142,12 +142,23 @@ body{
 #section_profile_image{
   position: absolute;
   width:80px;
-  background-color: black;
+  background-color: white;
   border-radius: 40px;
   height: 80px;
-  margin-left: 60px;
+  margin-left: 60px; 
   /*margin-top: 42px;*/
+
 }
+
+#section_profile_image img{
+  position: absolute;
+  width:80px;
+  border-radius: 40px;
+  height: 80px; 
+  /* needs to be changed */ 
+   margin-left: -52px; 
+}
+
 
 #update-link {
   font: 12px 'opensans-bold', sans-serif;
@@ -188,3 +199,23 @@ body{
   padding: 2%;
 }
 
+/* added styling to blogfeed */
+
+#blogfeed{
+  width: 80%;
+  margin: auto; 
+}
+#blogfeed hr{
+  margin-top: 0px;
+  margin-bottom: 1px; 
+  color: 'dark gray' ; 
+}
+
+#blogfeed_studentname{
+  font-weight: bold ; 
+  font:'Open Sans', sans-serif;
+}
+#blogfeed_title{
+  font-weight: bold ; 
+  font:'Open Sans', sans-serif;
+}

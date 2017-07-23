@@ -1,0 +1,13 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#partial_for_comments{
+	height: 100px;
+	width: 500px;
+	border: 2px solid black ;
+}
+
+.comments {
+	border: 2px solid black;
+}

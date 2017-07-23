@@ -23,8 +23,10 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
+    
     @blog = Blog.new(blog_params)
     @blog.student_id=current_student.id
+    byebug
     respond_to do |format|
       if @blog.save
         format.html { redirect_to '/', notice: 'Blog was successfully created.' }
@@ -34,21 +36,24 @@ class BlogsController < ApplicationController
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
+    byebug
   end
+  
 
   # PATCH/PUT /blogs/1
   # PATCH/PUT /blogs/1.json
 
-  #def update
-    #respond_to do |format|
-    #  if @blog.update(blog_params)
-     #   format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
-      #  format.json { render :show, status: :ok, location: @blog }
-     # else
-     #   format.html { render :edit }
-     #   format.json { render json: @blog.errors, status: :unprocessable_entity }
-     # end
-    ##end
+  def update
+    respond_to do |format|
+      if @blog.update(blog_params)
+        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.json { render :show, status: :ok, location: @blog }
+      else
+        format.html { render :edit }
+        format.json { render json: @blog.errors, status: :unprocessable_entity }
+      end
+  end
+end
 
 
   # DELETE /blogs/1

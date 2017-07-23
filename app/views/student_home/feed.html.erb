@@ -4,7 +4,7 @@
 	<%= blog.student.last_name %> </h5> 
 	<hr> 
 	<p id="blogfeed_title">
-	<%=link_to blog.title, url_for(controller: 'blogs', action: 'show' , :id => blog.id) %> | <%= time_ago_in_words(blog.created_at) %> </p> 
+	<%=link_to blog.title, url_for(controller: 'blogs', action: 'show' , :id => blog.id) %> | <%= time_ago_in_words(blog.created_at) %> ago </p> 
 	<p id="blogfeed_content"> <%=h truncate(blog.content, :length => 150) %> </p>
 
 	<br> <br> <br>  

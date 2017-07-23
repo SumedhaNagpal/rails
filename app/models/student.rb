@@ -1,4 +1,5 @@
 class Student < ActiveRecord::Base
+	has_many :comments , dependent: :destroy
 	has_many :blogs
 	has_many :skills 
   # Include default devise modules. Others available are:

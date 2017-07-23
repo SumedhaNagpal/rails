@@ -64,6 +64,7 @@
       </div> 
 
       <main class="profile_page">
+        <% if params[:action]!='profile' %>
         <section id="side_profile">
           <div id="side_profile_section">
             <div id="section_header">
@@ -84,7 +85,8 @@
           </div>
 
           
-        </section>  
+        </section> 
+        <%end%> 
 
         <section id="current_stu_profile">
            <%= yield %>

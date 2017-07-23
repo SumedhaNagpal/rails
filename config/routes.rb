@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
-  resources :blogs
+  get 'comments/create'
+
+  get 'comments/destroy'
+
+  resources :blogs do
+    resources :comments
+  end
+
   devise_for :students, :controllers => { registrations: 'registrations' }
   root to: "student_home#feed"
   get 'student_home/feed'
 
+  #get '/blogs/index' => 'student_home/feed'
+  post 'comments/create'
   get 'student_home/profile/:id' => 'student_home#profile'
 
   get '/add_skills' => 'student_home#add_skill'

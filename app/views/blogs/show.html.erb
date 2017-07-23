@@ -11,5 +11,13 @@
 </p> <br>
 
 <br> <br> <br> 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to 'Edit', edit_blog_path(@blog) %> 
+
+<%= render 'comments/createcomment' %>
+
+<div id="comment_wrapper">
+<% @blog.comment_feed(@blog.id).each do |comment| %>
+	<%= render 'showcomments', comment: comment %>
+<% end %>
+</div>
+

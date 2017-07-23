@@ -1,0 +1,15 @@
+<div id="partial_for_comment" >
+<%= form_tag url_for(controller: 'comments', action: 'create', id: @blog.id) , remote: true do  %>
+
+
+  <div class="field" id="comment_box">
+    <%= label_tag :comment_content %><br>
+    <%= text_field_tag :comment_content %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>
+</div> 

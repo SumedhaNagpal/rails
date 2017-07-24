@@ -191,13 +191,29 @@ body{
     font: 20px 'opensans-bold', sans-serif;
 }
 
-#skills, #work_experiences, #positions_of_responsibility {
+.profile_divs{
 
-  background-color: #FFAF1B;
-  border: 1px solid black;
+  display: flex ;
+  justify-content: space-around;
   margin: 1%;
   padding: 2%;
-}
+ }
+
+ .profile_divs .leftside {
+  width: 25% ;
+  position: relative;
+  height: 100% ; 
+  text-align: left ;
+ }
+  .profile_divs .rightside {
+  position: relative;
+  height: 100% ; 
+  text-align: left ;
+  flex-grow: 1;
+  margin-left: 10% ; 
+ }
+ 
+
 
 /* added styling to blogfeed */
 

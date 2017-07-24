@@ -20,6 +20,9 @@ class StudentHomeController < ApplicationController
   end
 
   def profile
+    @skills = Skill.where(student_id: current_student.id).order('created_at DESC')
+    @experiences = Experience.where(student_id: current_student.id).order('created_at DESC')
+    @pors = Por.where(student_id: current_student.id).order('created_at DESC')
   end
 
   def notification

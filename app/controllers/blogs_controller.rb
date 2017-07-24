@@ -26,7 +26,7 @@ class BlogsController < ApplicationController
     
     @blog = Blog.new(blog_params)
     @blog.student_id=current_student.id
-    byebug
+  
     respond_to do |format|
       if @blog.save
         format.html { redirect_to '/', notice: 'Blog was successfully created.' }
@@ -36,7 +36,7 @@ class BlogsController < ApplicationController
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
-    byebug
+    
   end
   
 

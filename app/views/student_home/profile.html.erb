@@ -11,19 +11,59 @@
 	</div>
 
 	<div id="student_profile_main">
+		<!-- skills --> 
+			
+		<div class="profile_divs">
+		<div class="leftside" >
+			<h5>SKILLS</h5>
+		</div> 
+		<div class="rightside">
+		<ul>
+		<% @skills.each do |skill| %>		
+			<li class="skill_points"> <%= skill.skill_content %> </li>
+		<% end %> 
+		</ul>	
 
-		<div id="skills">			
-			<%= link_to 'ADD SKILLS' , url_for(controller: "student_home" , action: "new_skills")%>
+			  <i class="fa fa-plus"></i> <%= link_to 'ADD SKILLS' , url_for(controller: "student_home" , action: "new_skills")%>
+		</div> 
 		</div>
 
-		<div id="work_experiences">
-			<%= link_to 'ADD EXPERIENCE' , url_for(controller: "student_home" , action: "new_experience")%>
-		</div>
+		<hr width="80%"> 
+		<!-- exp -->
+		<div class="profile_divs">
+		<div class="leftside" >
+			<h5>EXPERIENCES</h5>
 
-		<div id="positions_of_responsibility">
-			<%= link_to 'ADD POSITIONS OF RESPONSIBILITY' , url_for(controller: "student_home" , action: "new_por") %>
 		</div>
+		<div class="rightside">
+		<ul>
+			<% @experiences.each do |experience| %>		
+			<li class="exp_points"> <h4> <%= experience.exp_title %></h4> <p> <%= experience.exp_content %> </p> </li>
+			<% end %> 
+		</ul> 
+			<i class="fa fa-plus"></i><%= link_to 'ADD EXPERIENCE' , url_for(controller: "student_home" , action: "new_experience")%>
+		</div>
+		</div> 
 
+
+		<hr width="80%"> 
+
+		<!-- experiences --> 
+		<div class="profile_divs">
+			<div class="leftside" >
+				<h5>POSITIONS OF RESPONSIBILITY</h5>
+			</div> 
+		<div class="rightside">
+			<ul>
+			<% @pors.each do |por| %>	
+			<li id="por_points"><h4> <%= por.por_title %> <h4> <p> <%= por.por_content %> </p> </li>
+			<% end %> 
+		</ul> 
+			<i class="fa fa-plus"></i><%= link_to 'ADD POSITIONS OF RESPONSIBILITY' , url_for(controller: "student_home" , action: "new_por") %>
+		</div>
+	</div> 
+
+		
 		<div id="research_paper">
 		</div>
 

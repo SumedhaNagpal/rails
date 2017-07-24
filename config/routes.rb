@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/' => 'static_home#index'
   get 'comments/create'
 
   get 'comments/destroy'
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   resources :blogs do
     resources :comments
   end
+
 
   devise_for :students, :controllers => { registrations: 'registrations' }
   root to: "student_home#feed"

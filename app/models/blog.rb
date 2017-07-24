@@ -7,7 +7,4 @@ class Blog < ActiveRecord::Base
 		comments = Comment.where(blog_id: blog_id).order(created_at: :DESC)
 	end
 
-
-
-
 end

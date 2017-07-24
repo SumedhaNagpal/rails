@@ -1,57 +1,63 @@
-<h2>Sign up</h2>
 
+<div id="devise_sign_up"> 
+<div id="devise_sign_up_header">
+<h2>Sign up.</h2>
+</div> 
+<div id="devise_sign_up_wrapper">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+   <p>  <%= f.label :first_name %> <br />
+   <span> <%= f.text_field :first_name, autofocus: true %> </span> </p>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true %>
+   <p> <%= f.label :last_name %></br>
+   <span>  <%= f.text_field :last_name, autofocus: true %> </span> </p> 
   </div>
 
   <div class="field">
-    <%= f.label :enrollment_no %>
-    <em>(Example: 03201012015)</em><br/>
-    <%= f.text_field :enrollment_no, autofocus: true %>
+  <p>  <%= f.label :enrollment_no %> 
+    <em>(Example: 03201012015)</em></br>
+    <span><%= f.text_field :enrollment_no, autofocus: true %> </span></p>
   </div>
 
   <div class="field">
-    <%= f.label :branch %>
-    <em>(Example: CSE/IT/ECE/MAE)</em><br/>
-    <%= f.text_field :branch, autofocus: true %>
+    <p> <%= f.label :branch %> 
+    <em>(Example: CSE/IT/ECE/MAE)</em> </br> 
+   <span> <%= f.text_field :branch, autofocus: true %></span></p>
   </div>
 
   <div class="field">
-    <%= f.label :year %>
-    <em>(Example: First)</em><br />
-    <%= f.text_field :year, autofocus: true %>
+    <p><%= f.label :year %> 
+    <em>(Example: First)</em> </br> 
+   <span> <%= f.text_field :year, autofocus: true %> </span> </p>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <p>  <%= f.label :email %></br>
+    <span><%= f.email_field :email, autofocus: true %></span></p>
   </div>
   
   <div class="field">
-    <%= f.label :password %>
+  <p>  <%= f.label :password %> 
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <% end %></br>
+   <span> <%= f.password_field :password, autocomplete: "off" %> </span> </p>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <p>  <%= f.label :password_confirmation %> </br>
+    <span><%= f.password_field :password_confirmation, autocomplete: "off" %> </span></p>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+  <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div> 
+</div> 

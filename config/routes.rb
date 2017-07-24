@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'static_home#index'
+  #get '/' => 'static_home#index'
   get 'comments/create'
 
   get 'comments/destroy'

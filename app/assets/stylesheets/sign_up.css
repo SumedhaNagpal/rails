@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400,600,700|Roboto+Condensed:300,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700|Maven+Pro:400,700);
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	 margin: 0;
+  background: #000; 
+	  
+}
+.video {
+ position: fixed;
+ top: 50%; left: 50%;
+ z-index: -1;
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ transform: translate(-50%, -50%);
+}
+
+#devise_sign_up{
+	display: flex;
+	justify-content : center;
+	flex-direction: column;
+	margin-top: 30px;  
+}
+
+#devise_sign_up_wrapper{
+	margin: auto;
+	background-color: black;
+	width: 30% ;
+	flex-grow: 1;
+	 opacity:0.5;
+	
+  
+}
+#devise_sign_up_form
+{
+	background-color: transparent;
+	opacity: 1;
+}
+#button{
+	background-color: #f44336;
+	border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#devise_sign_up_header{
+	margin: auto;
+	width: 30%;
+	 opacity:0.5;
+	background-color: black ;
+	height: 80px;
+}
+#devise_sign_up_header h2{
+	color: #98BD07;	
+	font-family: 'Helvetica Neue', sans-serif; 
+	font-size: 60px; 
+	font-weight: bold; 
+	letter-spacing: -1px;
+	line-height: 1; 
+	text-align: center;
+
+}
+#devise_sign_up_wrapper .field{
+	padding-bottom: 7px; 
+}
+
+#devise_sign_up_wrapper .field p{
+	font-family: 'Brown'; 
+	font-size: 15px; font-weight: bold; 
+	letter-spacing: -1px;  
+	color: #D46A6A; 
+	text-transform: uppercase ; 
+	text-align: center ; 
+}
+#devise_sign_up_wrapper .field span{
+	width: 80%;
+	box-shadow: 10px 10px 5px #888888;
+	
+
+}

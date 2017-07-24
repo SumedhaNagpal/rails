@@ -1,2 +1,3 @@
 noty({text: 'Comment was created', type: 'alert'});
 $('#comment_wrapper').prepend("<%= escape_javascript (render 'blogs/showcomments', comment: @comment) %>");
+$('#comment_box').val("");

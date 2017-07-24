@@ -15,9 +15,13 @@ Rails.application.routes.draw do
   post 'comments/create'
   get 'student_home/profile/:id' => 'student_home#profile'
 
-  get '/add_skills' => 'student_home#add_skill'
-  get '/add_experience' => 'student_home#add_experience'
-  get '/add_por' => 'student_home#add_por'
+  get '/new_skills' => 'student_home#new_skills'
+  post '/add_skills' => 'student_home#add_skill'
+  get '/new_experience' => 'student_home#new_experience'
+  post '/add_experience' => 'student_home#add_experience'
+  get '/new_por' => 'student_home#new_por'
+  post '/add_por' => 'student_home#add_por'
+
   get 'student_home/notification'
 
   get 'student_home/write_blog'
